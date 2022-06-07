@@ -1,5 +1,8 @@
+*{
+    font-family: 'Nuosu SIL', serif;
+}
+
 h2, p {
-  font-family: 'Forum', cursive;
   text-align: center;
 }
 
@@ -13,11 +16,24 @@ p {
   font-size: 1.2em;
 }
 
+#search-title{
+text-align: center;}
+
+#search-description{
+margin-left: 12%;
+  margin-right: 12%;
+background-color: #d7ccc8;
+border-color: #422a14;
+border-style: dashed;
+border-width: thin;
+border-radius: 1em;
+padding:4px;
+}
+
 #search-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(67, 68, 70, 0.4);
   width: 100%;
   height:100%;
   padding:10px;
@@ -50,7 +66,7 @@ input,button,select {
 
 
 .poke-list-item {
-  background-color: rgba(236, 236, 230, 0.91);
+  background-color: rgba(236, 236, 230, 0.80);
   display: flex;
   flex-direction: column;
   width:90%;

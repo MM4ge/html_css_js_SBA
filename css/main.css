@@ -9,7 +9,7 @@
 
 body {
   display: flex;
-  background-color: black;
+  background-color: #e1cbb1;
   flex-direction: column;
   width:100vw;
   height:100vh;
@@ -19,12 +19,12 @@ body {
   z-index: -1;
   pointer-events: none;
   position: fixed;
-  background-image:  url("../images/pexels-vincent-ma-janssen.jpg");
+  background-image:  url("../images/Lightest.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 100vh;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .navbar {
@@ -32,8 +32,8 @@ body {
   justify-content: center;
   align-items: center;
   width:100%;
-  height:6rem;
-  padding: 10px;
+  height:4rem;
+  padding: 8px;
 }
 
 .navbar ul {
@@ -45,12 +45,13 @@ body {
 }
 
 .navbar ul li a {
-  color:white;
+  color:black;
 }
 
 li {
   padding:10px;
   border: 1px solid rgba(255, 255, 255, 0);
+  background-color: #a1887f;
 }
 
 li:hover {
@@ -58,9 +59,8 @@ li:hover {
 }
 
 .selected-link {
-  text-decoration: underline;
-  background-color: rgba(162, 162, 162, 0.34);
-  border-bottom-left-radius: 10px;
+  background-color: #976f47;
+  font-weight:600;
 }
 
 @keyframes hovered {

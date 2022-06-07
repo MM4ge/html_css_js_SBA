@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/scramble.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -26,14 +29,14 @@
     <h1>
         Word Scramble
     </h1>
-    <p>
+    <p id="scramble-rules">
         Guess the scrambled word to win! Each correct guess increases the length of each word by a letter.
         Miss three times on a word and you'll have to restart.
     </p>
 </div>
 <div id="scrambled-div">
     <p id="lives-display">
-        4 guess(es) left!
+        <em id="lives-display-text">4 guess(es) left!</em>
     </p>
     <h1 id="scrambled-word">
     </h1>
@@ -41,12 +44,13 @@
 <div id="guess-bar">
     <form onsubmit="return false" id="scramble-guess">
         <span>
-        <input id="guess-input" type="text" placeholder="Type the word here!"/>
-        <button type="submit" id="guess-button">GO</button>
+        <input id="guess-input" type="text" placeholder="Type your guess here!"/>
+        <button type="submit" id="guess-button">Guess</button>
       </span>
     </form>
 </div>
 
+<div id="guess-div">
 <table id ="guess-table">
     <caption>Word Scramble Guesses</caption>
     <tr id="col-names">
@@ -54,5 +58,6 @@
         <th>Scrambled Word</th>
     </tr>
 </table>
+</div>
 </body>
 </html>

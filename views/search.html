@@ -9,10 +9,12 @@
   <script defer src="../js/search.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap" rel="stylesheet">
+  <!--
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  -->
 </head>
 <body>
-
   <div id="loading-icon-container">
     <div id="loading-icon"></div>
     <p>please wait</p>
@@ -31,6 +33,15 @@
       </ul>
     </nav>
   </header>
+  <div id="search-title">
+    <h1>
+      Word Search
+    </h1>
+    <p id="search-description">
+      Look up a word in the dictionary! Enter the word, select if you want to see its definition or phonetics,
+      then hit Search.
+    </p>
+  </div>
   <div id="search-container">
     <form onsubmit="return false" id="pokemon-search">
       <select name="pokefilter" id="pokefilter">
@@ -38,8 +49,8 @@
         <option value="phonetics">Phonetics</option>
       </select>
       <span>
-        <input id="pokesearch-input" type="text" placeholder="search"/>
-      <button type="submit" id="poke-search-button">GO</button>
+        <input id="pokesearch-input" type="text" placeholder="Word"/>
+      <button type="submit" id="poke-search-button">Search</button>
       </span>
     </form>
 

@@ -6,6 +6,7 @@ const guessButton = document.getElementById("guess-button");
 const inputField = document.getElementById("guess-input");
 const scrambleDisplay = document.getElementById("scrambled-word");
 const livesDisplay = document.getElementById("lives-display");
+const livesDisplayText = document.getElementById("lives-display-text");
 const guessTable = document.getElementById("guess-table");
 
 const levelOneWords = ["add","bed","can","day","eat","far","got","has","let","map","new","oil","put","ran","sea","two",
@@ -75,6 +76,11 @@ function guessWord(event)
   console.log("Input guess: " + guess + " word: " + currentWord);
   inputField.value = "";
 
+  // Dunno if this should happen all the time or only on wrongs
+  // It feels off if it's only on wrongs since the table doesn't increase with a right answer
+  // but also right answers don't add anything to the table...
+  updateGuessesTable(guess);
+
   // Check if the guess is right
   if(guess === currentWord)
   {
@@ -83,10 +89,7 @@ function guessWord(event)
   // Otherwise, we lose a guess and maybe the game
   else
   {
-    // Dunno if this should happen all the time or only on wrongs
-    // It feels off if it's only on wrongs since the table doesn't increase with a right answer
-    // but also right answers don't add anything to the table...
-    updateGuessesTable(guess);
+
 
     loseLife();
   }
@@ -95,9 +98,16 @@ function guessWord(event)
 function updateGuessesTable(guess)
 {
     const tableGuess = document.createElement("tr");
+    var rightGuess = (guess === currentWord);
 
     let guessHTML = '<tr class="prev-guess">';
-    guessHTML += '<td>' + guess + '</td>';
+    guessHTML += '<td>';
+    if(rightGuess)
+        guessHTML += "<b>";
+    guessHTML += guess;
+    if(rightGuess)
+            guessHTML += "</b>";
+    guessHTML += '</td>';
     guessHTML += '<td>' + scrambleDisplay.textContent + '</td>';
     guessHTML += '</tr>';
 
@@ -113,12 +123,12 @@ function raiseLevel()
     if(gameLevel < 5)
     {
         createScrambledWord();
-        livesDisplay.textContent = "" + lives + " guess(es) left!";
+        livesDisplayText.textContent = "" + lives + " guess(es) left!";
     }
     else // GG
     {
         scrambleDisplay.textContent = "You Win! Input any guess to play again!";
-        livesDisplay.textContent = "GG";
+        livesDisplayText.textContent = "GG";
         gameLevel = -1;
     }
 }
@@ -129,12 +139,12 @@ function loseLife()
     if(lives <= 0)
     {
         scrambleDisplay.textContent = "You Lost... Input any guess to try again!";
-        livesDisplay.textContent = "The correct word was " + currentWord;
+        livesDisplayText.textContent = "The correct word was " + currentWord + ".";
         gameLevel = -1;
     }
     else
     {
-        livesDisplay.textContent = "" + lives + " guess(es) left!";
+        livesDisplayText.textContent = "" + lives + " guess(es) left!";
     }
 }
 
