@@ -11,6 +11,37 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap" rel="stylesheet">
+  <style>
+  * {
+    color:#422a14;
+  }
+
+  img {
+  margin-top: 2em;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  div {
+    text-align: center;
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+
+  p {
+    background-color: #d7ccc8;
+    border-color: #422a14;
+    border-style: dashed;
+    border-width: thin;
+    border-radius: 1em;
+    padding:4px;
+    font-size:1.2em;
+  }
+
+  #api-link {
+    color: black;
+  }
+  </style>
 </head>
 <body>
 <div class="banner">
@@ -25,5 +56,18 @@
     </ul>
   </nav>
 </header>
+<div id="home-title">
+  <h1>
+    Welcome to Dictionary Site!
+  </h1>
+  <p id="home-description">
+    This is a small Dictionary-based website with a basic landing page, word scramble game, and a dictionary searcher
+    that uses the <a href="https://github.com/meetDeveloper/freeDictionaryAPI" id="api-link">Free Dictionary API</a> to find word
+    definitions and phonetics.
+  </p>
+</div>
+<div id="book-image">
+  <img src= "../images/book.jpg" alt="An opened book">
+</div>
 </body>
 </html>
