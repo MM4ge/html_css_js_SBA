@@ -58,7 +58,7 @@ async function searchForWords(event){
 
 function createPhoneticElems(word)
 {
-  const wordName = word[0].word;
+  const wordName = word[0].word.charAt(0).toUpperCase() + word[0].word.slice(1);
   for(let initialWord of word)
   {
     let phonetic = initialWord.phonetic;
@@ -87,7 +87,7 @@ function createDefinitionElems(word) {
   // definitions - the different definitions of a word
   // [] - definitions ary
   // definition - the String containing the definition
-  const wordName = word[0].word;
+  const wordName = word[0].word.charAt(0).toUpperCase() + word[0].word.slice(1);
   for(let initialWord of word)
   {
     for(let meaning of initialWord.meanings)

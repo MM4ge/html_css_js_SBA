@@ -8,6 +8,15 @@ h1 {
   text-align: center;
 }
 
+table {
+color: white;
+}
+
+#scrambled-word{
+color: pink;
+font-size: 2em;
+}
+
 h1 + p {
  color: white;
 }
@@ -22,7 +31,7 @@ p {
   font-size: 1.2em;
 }
 
-#search-container {
+#guess-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +42,7 @@ p {
   overflow: hidden;
 }
 
-#pokemon-search {
+#scramble-guess {
   flex:1;
   display: flex;
   justify-content: center;

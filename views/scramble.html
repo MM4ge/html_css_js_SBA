@@ -28,19 +28,31 @@
     </h1>
     <p>
         Guess the scrambled word to win! Each correct guess increases the length of each word by a letter.
-        Miss three times and you'll have to restart.
+        Miss three times on a word and you'll have to restart.
     </p>
 </div>
-<div id="search-container">
-    <form onsubmit="return false" id="pokemon-search">
+<div id="scrambled-div">
+    <p id="lives-display">
+        4 guess(es) left!
+    </p>
+    <h1 id="scrambled-word">
+    </h1>
+</div>
+<div id="guess-bar">
+    <form onsubmit="return false" id="scramble-guess">
         <span>
-        <input id="pokesearch-input" type="text" placeholder="search"/>
-        <button type="submit" id="poke-search-button">GO</button>
+        <input id="guess-input" type="text" placeholder="Type the word here!"/>
+        <button type="submit" id="guess-button">GO</button>
       </span>
     </form>
-
-
-    <div id="poke-grid-container"></div>
 </div>
+
+<table id ="guess-table">
+    <caption>Word Scramble Guesses</caption>
+    <tr id="col-names">
+        <th>Your Guess</th>
+        <th>Scrambled Word</th>
+    </tr>
+</table>
 </body>
 </html>
