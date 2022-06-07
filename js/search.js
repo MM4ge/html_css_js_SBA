@@ -117,14 +117,13 @@ function createNotFound(){
   // add an html element that says no matches found
 
   const errListItem = document.createElement("div");
-  errListItem.classList.add("poke-list-item");
+  errListItem.classList.add("search-list-item");
 
   const searchInnerHTML = `
     <div class="info-container">
-        <h2>MissingNo.</h2>
-        <p>No matching results</p>
+        <h2>Nothing, Nada, Zilch</h2>
+        <p>Sorry, we couldn\'t find your word in the dictionary.</p>
     </div>
-  <div class="img-container"><img src="../images/error.png">
   </div>
   `;
 
