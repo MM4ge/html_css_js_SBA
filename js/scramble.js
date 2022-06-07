@@ -73,7 +73,7 @@ function guessWord(event)
   }
 
   const guess = inputField.value.toLowerCase();
-  console.log("Input guess: " + guess + " word: " + currentWord);
+  console.log("Cheating output - Input guess: " + guess + " word: " + currentWord);
   inputField.value = "";
 
   // Dunno if this should happen all the time or only on wrongs

@@ -4,10 +4,10 @@ console.log("search.js loaded");
 const URL = "https://api.dictionaryapi.dev/api/v2/entries/en";
 
 // DOM ELEMENTS
-const searchButton = document.getElementById("poke-search-button");
-const pokeGridContainer = document.getElementById("poke-grid-container");
-const inputField = document.getElementById("pokesearch-input");
-const selectField = document.getElementById("pokefilter");
+const searchButton = document.getElementById("word-search-button");
+const searchGridContainer = document.getElementById("search-grid-container");
+const inputField = document.getElementById("wordsearch-input");
+const selectField = document.getElementById("searchfilter");
 const loading = document.getElementById("loading-icon-container");
 
 // CHECK FOR FILTER AND SEARCH FOR POKEMON
@@ -20,7 +20,7 @@ async function searchForWords(event){
   console.log("Search value: " + searchVal);
   // add loading to dom
   loading.style.opacity = "1";
-  pokeGridContainer.innerHTML = "";
+  searchGridContainer.innerHTML = "";
   // get search type
   let option = selectField.value;
   // let pokemon = [];
@@ -100,16 +100,16 @@ function createDefinitionElems(word) {
 
 function createElem(wordName, content)
 {
-  const pokeListItem = document.createElement("div");
-  pokeListItem.classList.add("poke-list-item");
+  const searchListItem = document.createElement("div");
+  searchListItem.classList.add("search-list-item");
 
   let definitionHTML = '<div class="info-container">';
   definitionHTML += '<h2>' + wordName + '</h2>';
   definitionHTML += '<p>' + content + '</p>';
   definitionHTML += '</div>';
 
-  pokeListItem.innerHTML = definitionHTML;
-  pokeGridContainer.appendChild(pokeListItem);
+  searchListItem.innerHTML = definitionHTML;
+  searchGridContainer.appendChild(searchListItem);
 }
 
 function createNotFound(){
@@ -119,7 +119,7 @@ function createNotFound(){
   const errListItem = document.createElement("div");
   errListItem.classList.add("poke-list-item");
 
-  const pokeInnerHTML = `
+  const searchInnerHTML = `
     <div class="info-container">
         <h2>MissingNo.</h2>
         <p>No matching results</p>
@@ -128,8 +128,8 @@ function createNotFound(){
   </div>
   `;
 
-  errListItem.innerHTML = pokeInnerHTML;
-  pokeGridContainer.appendChild(errListItem);
+  errListItem.innerHTML = searchInnerHTML;
+  searchGridContainer.appendChild(errListItem);
 }
 
 // API CALLS ----------------

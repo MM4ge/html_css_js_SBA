@@ -19,17 +19,6 @@ p {
 #search-title{
 text-align: center;}
 
-#search-description{
-margin-left: 12%;
-  margin-right: 12%;
-background-color: #d7ccc8;
-border-color: #422a14;
-border-style: dashed;
-border-width: thin;
-border-radius: 1em;
-padding:4px;
-}
-
 #search-container {
   display: flex;
   flex-direction: column;
@@ -40,7 +29,7 @@ padding:4px;
   overflow: hidden;
 }
 
-#pokemon-search {
+#word-search {
   flex:1;
   display: flex;
   justify-content: center;
@@ -48,7 +37,7 @@ padding:4px;
   margin: auto;
 }
 
-#poke-grid-container {
+#search-grid-container {
   flex:6;
   display: flex;
   justify-content: center;
@@ -65,7 +54,7 @@ input,button,select {
 }
 
 
-.poke-list-item {
+.search-list-item {
   background-color: rgba(236, 236, 230, 0.80);
   display: flex;
   flex-direction: column;
@@ -80,7 +69,7 @@ input,button,select {
   align-items: center;
 }
 
-.poke-list-item .info-container {
+.search-list-item .info-container {
   flex:1;
   display: flex;
   flex-direction: column;
@@ -88,7 +77,7 @@ input,button,select {
   align-items: center;
 }
 
-.poke-list-item .img-container {
+.search-list-item .img-container {
   flex:2;
   display: flex;
   flex-direction: column;
@@ -97,7 +86,7 @@ input,button,select {
   height: 100px;
 }
 
-.poke-list-item .img-container img {
+.search-list-item .img-container img {
   max-height: 100%;
 }
 

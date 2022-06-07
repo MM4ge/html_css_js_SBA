@@ -10,9 +10,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap" rel="stylesheet">
-  <!--
-  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-  -->
+  <style>
+    #search-description{
+      margin-left: 12%;
+      margin-right: 12%;
+      border-color: #422a14;
+      border-style: dashed;
+      border-width: thin;
+      border-radius: 1em;
+      padding:4px;
+    }
+  </style>
 </head>
 <body>
   <div id="loading-icon-container">
@@ -28,7 +36,7 @@
     <nav class="navbar">
       <ul>
         <li><a href="../index.html">HOME</a></li>
-        <li><a href="scramble.html">WORD SCRAMBLE</a></li>
+        <li><a href="scramble.html">SCRAMBLE</a></li>
         <li class="selected-link"><a href="views/search.html">SEARCH</a></li>
       </ul>
     </nav>
@@ -37,25 +45,25 @@
     <h1>
       Word Search
     </h1>
-    <p id="search-description">
+    <p style="background-color: #d7ccc8;" id="search-description">
       Look up a word in the dictionary! Enter the word, select if you want to see its definition or phonetics,
       then hit Search.
     </p>
   </div>
   <div id="search-container">
-    <form onsubmit="return false" id="pokemon-search">
-      <select name="pokefilter" id="pokefilter">
+    <form onsubmit="return false" id="word-search">
+      <select name="searchfilter" id="searchfilter">
         <option value="definitions">Definitions</option>
         <option value="phonetics">Phonetics</option>
       </select>
       <span>
-        <input id="pokesearch-input" type="text" placeholder="Word"/>
-      <button type="submit" id="poke-search-button">Search</button>
+        <input id="wordsearch-input" type="text" placeholder="Word"/>
+      <button type="submit" id="word-search-button">Search</button>
       </span>
     </form>
 
 
-    <div id="poke-grid-container"></div>
+    <div id="search-grid-container"></div>
   </div>
 </body>
 </html>
