@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DictionarySite Word Scramble</title>
+  <script defer src="../js/scramble.js"></script>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/scramble.css">
+</head>
+<body>
+
+<div class="banner">
+</div>
+
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="../index.html">HOME</a></li>
+      <li class="selected-link"><a href="views/scramble.html">WORD SCRAMBLE</a></li>
+      <li><a href="search.html">SEARCH</a></li>
+    </ul>
+  </nav>
+</header>
+<div id="scramble-title">
+    <h1>
+        Word Scramble
+    </h1>
+    <p>
+        Guess the scrambled word to win! Each correct guess increases the length of each word by a letter.
+        Miss three times and you'll have to restart.
+    </p>
+</div>
+<div id="search-container">
+    <form onsubmit="return false" id="pokemon-search">
+        <span>
+        <input id="pokesearch-input" type="text" placeholder="search"/>
+        <button type="submit" id="poke-search-button">GO</button>
+      </span>
+    </form>
+
+
+    <div id="poke-grid-container"></div>
+</div>
+</body>
+</html>
